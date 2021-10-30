@@ -24,8 +24,6 @@ body {
     width: 100px;
     margin: 10px;
 }
-.head-list {
-}
 ul {
     display: flex;
     flex-direction: row;
