@@ -1,28 +1,45 @@
 body {
     margin: 0 auto;
     min-height: 100vh;
-    width: 100%;
-    max-width: auto;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    flex: 1;
+}
+
+
+* {
+    box-sizing: border-box;
 }
 
 .top{
     display: flex;
     flex-direction: column;
     background-color: #1f2937;
+    max-width: 100%;
+    flex-wrap: wrap;
+    flex: 1 1 auto;
 }
 /*header-Start*/
 .header {
-    margin: 10px 200px 60px;
+    margin: 10px 5% 6vh;
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    height: 10vh;
 }
 .head-logo {
-   flex: 1;
-   display: flex;
-   justify-content: space-between;
+    
+}
+.head-list {
+    display: flex;
+    float: right;
+    padding: 0 0% 0 0;
 }
 .logo {
-    height: 100px;
-    width: 100px;
-    margin: 10px;
+    max-width: 5em;
+    margin: 7% 0 0 0;
 }
 ul {
     display: flex;
@@ -33,34 +50,46 @@ ul {
 a.header-link {
     text-decoration: none;
     color: #e5e7eb;
+    font-size: 15px;
 }
 /*header-End*/
 
 /*top-main-Start*/
 .top-main {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    /* max-height: 50vh; */
+    /* flex-wrap: wrap; */
+    /* flex: 1; */
+    margin-bottom: 5%;
 }
 .top-main-right {
-    height: 400px;
-    width: 600px;
-    margin: 0 200px 100px 0;
+    flex: 1;
+    margin-right: 10% ;
+        
+}
+.top-img {
+    height: auto;
+    max-width: 100%;
     border: 0;
     border-radius: 0;
 }
 .top-main-left {
+    display: flex;
     flex-direction: column;
-    margin: 0 0 0 200px;
-    justify-content: left;
+    padding: 0 0 0 10%;
+    float: left;
     color: #f9faf8;
+    max-width: 100%;
+    flex: 1;
 }
 .title {
-    font-size: 48px;
+    font-size: 5vh;
     padding: 8px;
 }
 .description {
     padding: 8px;
-    font-size: 18px;
+    font-size: 3vh;
     color: #e5e7eb;
 }
 .top-button {
@@ -72,17 +101,19 @@ a.header-link {
     border-radius: 10px;
     border-color: #3882f6;
     padding: 5px 20px;
+    max-width: 10em;
 }
 /*top-main-End*/
 
 /*middle-Start*/
-    /*middle-top-Start*/
+/*middle-top-Start*/
 .middle {
     display: flex;
     flex-direction: column;
     background-color: white;
     justify-content: center;
     align-items: center;
+    flex: 1;
 }
 .information {
     margin: 50px 250px 100px;
@@ -111,19 +142,18 @@ a.header-link {
 }
 a {
     color: #1f2937;
-    font-size: 18px;
+    font-size: 2vh;
     text-decoration: none;  
 }
 img {
-    width: 150px;
-    height: 100px;
     border: 3px solid;
     border-radius: 10px;
     border-color: #3882f6;
+    max-width: 8em;
 }
-    /*middle-top-End*/
+/*middle-top-End*/
 
-    /*middle-middle-Start*/
+/*middle-middle-Start*/
 .quote {
     background-color: #e5e7eb;
     display: flex;
@@ -139,9 +169,9 @@ img {
     margin: 100px 250px;
     color: #1f2937;
 }
-    /*middle-middle-End*/
+/*middle-middle-End*/
 
-    /*middle-bot-Start*/
+/*middle-bot-Start*/
 .promo {
     display: flex;
     justify-items: space-between;
@@ -180,4 +210,71 @@ img {
     background-color: #1f2937;
     color: white;
     height: 100px;
+}
+@media all and (max-width: 900px) {
+    /*Top part*/
+    .top-main {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .top-main-left{
+        flex: 1 1 50%;
+        padding: 0%;
+        margin: 5% 10%;
+    }
+    .top-main-right{
+        flex: 1 1 50%;
+        margin: 5% 10%;
+    }
+
+    /*middle part*/
+    .middle {
+        flex-wrap: wrap;
+        flex: 1;
+        align-content: center;
+    }
+    .information{
+        margin: 5% 10%;
+        flex-wrap: wrap;
+    }
+    .title-mid {
+        flex: 1;
+        margin: 0 0 5% 0;
+        text-align: center;
+    }
+    .pictures {
+        flex-direction: column;
+        gap: 0;
+    }
+    .one {
+        margin: 5%;
+    }
+    .quote-text {
+        margin: 5% 10%;
+        font-size: 1em;
+    }
+    .promo {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin: 0;
+        max-width: 100%;
+        padding: 5% 10%;
+        text-align: center;
+    }
+    .text {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin: 0;
+        
+        /* justify-content: sp;
+        align-content: center; */
+    }
+    .promo-text {
+        margin: 5%;
+    }
+    .footer {
+        
+    }
 }
